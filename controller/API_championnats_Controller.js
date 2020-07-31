@@ -83,8 +83,9 @@ exports.championnatsModif = function (req, res) {
 
 //supprimer un championnat
 exports.championnatsSupp = function(req, res){
+    let idchampionnats = req.params.id;
     let supp = "DELETE FROM `championnats` WHERE (`championnats`.`idchampionnats` = ?)";
-    connection.query(supp, [req.params.idchampionnats], (error, sqlRES) => {
+    connection.query(supp, idchampionnats, (error, sqlRES) => {
         if (error) {
             res.status(400).json(error);
         }else{

@@ -89,8 +89,9 @@ exports.equipesModif = function (req, res) {
 
 //supprimer une équipe
 exports.equipesSupp = function(req, res){
+    let idequipes = req.params.id;
     let supp = "DELETE FROM `equipes` WHERE (`equipes`.`idequipes` = ?)";
-    connection.query(supp, [req.params.idequipes], (error, sqlRES) => {
+    connection.query(supp, idequipes, (error, sqlRES) => {
         if (error) {
             res.status(400).json(error);
         }else{
