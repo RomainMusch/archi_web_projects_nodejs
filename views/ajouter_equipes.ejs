@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FootDiv</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>
+            <img id="menuButton" src="" alt="icon_burger_menu">  
+            <a href="/">Gestion football</a>
+        </h1>
+    </header>
+    <main>
+        <section class="ajouter">
+            <form action="/equipesAdd" method="POST">
+                <div class= "form_group">
+                    <label for="nom_equipes">Nom de l'équipe : </label>
+                    <input type="text" name="nom_equipes" value="<%=equipes.nom_equipes%>" required></br></br>
+                </div>
+
+                <div class= "form_group">
+                    <label for="idchampionnats">Championnat : </label>
+                    <select name="idchampionnats" required>
+                        <option selected hidden>-</option>
+                        <% for (let i = 0 ;  i < championnats.length ; i++) { %>
+                        <option value="<%=championnats[i].idchampionnats%>" <% if(equipes.idchampionnats === championnats[i].idchampionnats){ %> selected <%}%>><%=championnats[i].nom_championnats%></option>
+                        <%}%>
+                    </select><br /><br /><br />
+                </div>
+
+                <input type="hidden" name="idequipes" value="<%=equipes.idequipes%>">
+                <input type="submit" class="modifier" value="Ajouter">
+                <input type="button" class="supprimer" value="Annuler" onclick="history.go(-1)">
+            </form>
+        </section>
+    </main>
+    <nav id="mainMenu">
+      <a href="/">accueil</a>
+      <a href="/joueurs">joueurs</a>
+      <a href="/equipes">équipes</a>
+      <a href="/championnats">championnats</a>
+    </nav>
+
+    <footer>2020, copyright © FootDiv</footer>
+    <div id="overlay"></div>
+</body>
+</html>

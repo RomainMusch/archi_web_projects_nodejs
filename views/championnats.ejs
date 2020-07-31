@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FootDiv</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>
+            <img id="menuButton" src="" alt="icon_burger_menu">  
+            <a href="/">Gestion football</a>
+        </h1>
+    </header>
+    <main>
+        <div class="liste_championnats">
+            <h2>Liste des championnats : </h2>
+            <ul><% for(var i = 0; i < championnats.length; i++){ %>
+                <li><%= championnats[i].nom_championnats %>
+                    <a href="/championnats_modif/<%= championnats[i].idchampionnats %>" class="modifier">Modifier</a>
+                    <a href="/championnats_supp/<%= championnats[i].idchampionnats %>" class="supprimer">Supprimer</a></li></li>
+                    <ul>
+                        <li> <%= championnats[i].pays_championnats %></li>
+                    </ul>
+              <% } %> </ul>
+            <p>                 <a href="ajouter_championnats" class="ajouter">Ajouter un championnat</a></p>
+        </div>
+    </main>
+    <nav id="mainMenu">
+      <a href="/">accueil</a>
+      <a href="/joueurs">joueurs</a>
+      <a href="/equipes">équipes</a>
+      <a href="/championnats">championnats</a>
+    </nav>
+
+    <footer>2020, copyright © FootDiv</footer>
+    <div id="overlay"></div>
+</body>
+</html>

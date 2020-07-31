@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FootDiv</title>
+    <meta name="description" content=""/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>
+            <img id="menuButton" src="" alt="icon_burger_menu">  
+            <a href="/">Gestion football</a>
+        </h1>
+    </header>
+    <main>
+        <section class="ajouter">
+            <form action="/joueursAdd" method="POST">
+                <div class= "form_group">
+                    <label for="nom_joueurs">Nom du joueur : </label>
+                    <input type="text" name="nom_joueurs" value="<%=joueurs.nom_joueurs%>" required></br></br>
+                </div>
+
+                <div class= "form_group">
+                    <label for="age_joueurs">Âge : </label>
+                    <input type="text" name="age_joueurs" value="<%=joueurs.age_joueurs%>" required></br></br>
+                </div>
+
+                <div class= "form_group">
+                    <label for="poste_joueurs">Poste : </label>
+                    <input type="text" name="poste_joueurs" value="<%=joueurs.poste_joueurs%>" required></br></br>
+                </div>
+
+                <div class= "form_group">
+                    <label for="idequipes">Équipe : </label>
+                    <select name="idequipes" required>
+                        <option selected hidden>-</option>
+                        <% for (let i = 0 ;  i < equipes.length ; i++) { %>
+                        <option value="<%=equipes[i].idequipes%>" <% if(joueurs.idequipes === equipes[i].idequipes){ %> selected <%}%>><%=equipes[i].nom_equipes%></option>
+                        <%}%>
+                    </select><br /><br /><br />
+                </div>
+
+                <input type="hidden" name="idjoueurs" value="<%=joueurs.idjoueurs%>">
+                <input type="submit" class="modifier" value="Sauvegarder">
+                <input type="button" class="supprimer" value="Annuler" onclick="history.go(-1)">
+            </form>
+        </section>
+    </main>
+    <nav id="mainMenu">
+      <a href="/">accueil</a>
+      <a href="/joueurs">joueurs</a>
+      <a href="/equipes">équipes</a>
+      <a href="/championnats">championnats</a>
+    </nav>
+
+    <footer>2020, copyright © FootDiv</footer>
+    <div id="overlay"></div>
+</body>
+</html>
