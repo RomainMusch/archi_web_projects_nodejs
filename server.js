@@ -6,9 +6,6 @@ let bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-// lien db file connection
-let connection = require('./db.js');
-
 // import routes
 let router = require('./routes');
 app.use('/', router);

@@ -12,7 +12,7 @@ exports.joueursList = function(req,res){
         }else {
             res.status(200);
             joueursList =  sqlRES;
-            res.render('joueurs.ejs', {joueurs:joueursList});
+            res.json('joueurs.ejs', {joueurs:joueursList});
         }
     });
 }
@@ -59,7 +59,7 @@ exports.joueursForm = function(req, res) {
             res.status(400).json(error);
         }else{
             res.status(200);
-            res.render('ajouter_joueurs.ejs', {joueurs:{idjoueurs:"", nom_joueurs:"", age_joueurs:"", poste_joueurs:"", idequipes:""}, equipes:sqlRES});
+            res.json('ajouter_joueurs.ejs', {joueurs:{idjoueurs:"", nom_joueurs:"", age_joueurs:"", poste_joueurs:"", idequipes:""}, equipes:sqlRES});
         }
     })
 }
@@ -76,7 +76,7 @@ exports.joueursModif = function (req, res) {
                     res.status(400).json(error);
                 }else{
                     res.status(200);   
-                    res.render('ajouter_joueurs.ejs',{joueurs:sqlRES[0], equipes:sqlRESa})         
+                    res.json('ajouter_joueurs.ejs',{joueurs:sqlRES[0], equipes:sqlRESa})         
                 }
             })
         }
