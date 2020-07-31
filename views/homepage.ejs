@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>FootDiv</title>
-    <meta name="description" content=""/>
+    <meta name="description" content="t"/>
+    <link href="http://localhost:8000/css/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
     <header>
         <h1>
-            <img id="menuButton" src="" alt="icon_burger_menu">  
-            <a href="/">Gestion football</a>
+            FootDiv, la gestion footballistique.
         </h1>
     </header>
+    <div>
+        <img src="../img/banner.jpg" alt="terrain de football" class="banner">
+    </div>
     <main>
+        <nav id="Menu">
+            <a href="/" class="navi"><button>Accueil</button></a>
+            <a href="/joueurs" class="navi"><button>Joueurs</button></a>
+            <a href="/equipes" class="navi"><button>Équipes</button></a>
+            <a href="/championnats" class="navi"><button>Championnats</button></a>
+        </nav>
         <section class="homepage">
-            <p>bienvenue, vous êtes connecté en tant que .</strong></p>
-            <p>projet d'architecture & ergonomie WEB.</strong></p>
-            <p>vous êtes sur le back-end du site, qui sert à la gestion footbalistique.</p>
-            <div style="margin-top: 7rem;">
-                <p>master business analyst.</p>
-                <p>ecam - ichec.</p>
-                <p><span class="color">nom : </span> Romain Musch.</p>
-                <p><span class="color">matricule :</span> 191016.</p>
-                <p><span class="color">professeurs :</span> monsieurs Dekimpe & Lurkin.</p>
+            <p>Projet d'architecture WEB de M1 Business Analyst</p>
+            <div class="auteur">
+                <p>MASTER Business Analyst</p>
+                <p>Romain Musch</p>
+                <p>191016 </p>
             </div>
         </section>
     </main>
-    <nav id="mainMenu">
-      <a href="/">accueil</a>
-      <a href="/joueurs">joueurs</a>
-      <a href="/equipes">équipes</a>
-      <a href="/championnats">championnats</a>
-    </nav>
-
-    <footer>2020, copyright © FootDiv</footer>
-    <div id="overlay"></div>
+    <footer>2020, © FootDiv</footer>
 </body>
 </html>
