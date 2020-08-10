@@ -24,9 +24,9 @@ router.get('/joueurs_modif/:id',(joueurs_Controller.joueursModif));
 router.get('/joueurs_supp/:id', (joueurs_Controller.joueursSupp));
     //joueurs routes API
 router.get('/API/joueurs', (API_joueurs_Controller.joueursList));
-router.post('/API/joueurs', (API_joueurs_Controller.joueursAdd));
+router.post('/API/joueursadd', (API_joueurs_Controller.joueursAdd));
 router.put('/API/joueurs/:id',(API_joueurs_Controller.joueursModif));
-router.delete('/API/joueurs/:id', (API_joueurs_Controller.joueursSupp));
+router.delete('/API/joueurs_supp/:id', (API_joueurs_Controller.joueursSupp));
 
 
     //équipes routes
@@ -37,9 +37,9 @@ router.get('/equipes_modif/:id',(equipes_Controller.equipesModif));
 router.get('/equipes_supp/:id', (equipes_Controller.equipesSupp));
     //équipes routes API
 router.get('/API/equipes', (API_equipes_Controller.equipesList));
-router.post('/API/equipes', (API_equipes_Controller.equipesAdd));
-router.put('/API/equipes/:id',(API_equipes_Controller.equipesModif));
-router.delete('/API/equipes/:id', (API_equipes_Controller.equipesSupp));
+router.post('/API/equipesadd', (API_equipes_Controller.equipesAdd));
+router.put('/API/equipes_modif/:id',(API_equipes_Controller.equipesModif));
+router.delete('/API/equipes_supp/:id', (API_equipes_Controller.equipesSupp));
 
 
     //championnats routes
@@ -50,8 +50,8 @@ router.get('/championnats_modif/:id',(championnats_Controller.championnatsModif)
 router.get('/championnats_supp/:id', (championnats_Controller.championnatsSupp));
     //championnats routes API
 router.get('/API/championnats', (API_championnats_Controller.championnatsList));
-router.post('/API/championnats', (API_championnats_Controller.championnatsAdd));
-router.put('/API/championnats/:id',(API_championnats_Controller.championnatsModif));
-router.delete('/API/championnats/:id', (API_championnats_Controller.championnatsSupp));
+router.post('/API/championnatsadd', (API_championnats_Controller.championnatsAdd));
+router.put('/API/championnats_modif/:id',(API_championnats_Controller.championnatsModif));
+router.delete('/API/championnats_supp/:id', (API_championnats_Controller.championnatsSupp));
 
 module.exports = router;
