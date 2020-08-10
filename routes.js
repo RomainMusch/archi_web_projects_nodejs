@@ -25,7 +25,7 @@ router.get('/joueurs_supp/:id', (joueurs_Controller.joueursSupp));
     //joueurs routes API
 router.get('/API/joueurs', (API_joueurs_Controller.joueursList));
 router.post('/API/joueursadd', (API_joueurs_Controller.joueursAdd));
-router.put('/API/joueurs/:id',(API_joueurs_Controller.joueursModif));
+router.put('/API/joueurs_modif/:id',(API_joueurs_Controller.joueursModif));
 router.delete('/API/joueurs_supp/:id', (API_joueurs_Controller.joueursSupp));
 
 
