@@ -58,7 +58,7 @@ exports.joueursModif = function(req, res) {
 //supprimer un joueur
 exports.joueursSupp = function(req, res){
     let idjoueurs = req.params.id;
-    let supp = "DELETE FROM `joueurs` WHERE (`joueurs`.`idjoueurs` = ?)";
+    let supp = "DELETE FROM joueurs WHERE (`joueurs`.`idjoueurs` = ?)";
     connection.query(supp, idjoueurs, (error, sqlRES) => {
         if (error) {
             res.status(400).json({'message':error});
