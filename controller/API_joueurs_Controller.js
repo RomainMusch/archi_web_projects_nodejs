@@ -64,7 +64,7 @@ exports.joueursSupp = function(req, res){
             res.status(400).json({'message':error});
         }else{
             console.log("Joueur supprimé de la DB");
-            res.json({'messages':'Joueur supprimé'});
+            res.json({'message':'Joueur supprimé'});
         }
     });
 };
