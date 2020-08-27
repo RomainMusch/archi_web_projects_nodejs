@@ -1,150 +1,339 @@
-header {
-  text-align: center;
-  color:white;
+@media screen and (min-width: 800px){
+
+  header {
+    text-align: center;
+    color:white;
+  }
+
+  main{
+    display:flex;
+  }
+  .banner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:30%;
+    border: 1px solid white;
+  }
+  nav{
+    display:flex;
+    flex-direction: row;
+    margin:auto;
+    padding:auto;
+  }
+  button{
+    cursor:pointer;
+  }
+  .navi button{
+    margin:auto;
+    margin-right: 25px;
+    margin-left:25px;
+    font-size:30px;
+    padding:20px;
+    border-radius: 8px;
+    transition-duration: 0,4s;
+    background-color: #d4d1d1;
+  }
+  .navi button:hover{
+    background-color:rgb(46, 44, 44);
+    color:white;
+  }
+
+
+  .homepage{
+    margin: auto;
+    margin-top:75px;
+    margin-right: 225px;
+    border: 2px solid white;
+    padding: 10px;
+    color:white;
+  }
+  .auteur{
+    margin-left:50px;
+  }
+  .liste{
+    margin-left: 5%;
+    color:white;
+  }
+  .ajouter{
+    margin:auto;
+    margin-top:25px;
+    border:1px solid white;
+    border-radius: 5px;
+    padding:15px;
+  }
+
+  .ajouter_new button {  
+    margin:auto;
+    margin-left:30px;
+    padding:10px;
+    font-size:20px;
+    border-radius: 8px;
+    transition-duration: 0,4s; 
+    background-color: #d4d1d1;
+  }  
+  .ajouter_new button:hover{
+    background-color: black;
+    color:white;
+  }
+    
+  body {  
+    color: #b1aeae;  
+    font-size: 20px;  
+    font-family:Arial, monospace;  
+    background-color: #383a3b;  
+  }  
+    
+  h2 {  
+    text-align: center;  
+  }  
+
+  .liste_jou{
+    width: 66%;
+    margin-left:25%;
+    margin-top: 15%;
+  }
+
+  .ajouter button{
+    margin:auto;
+    margin-top:5%;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .sauvegarder{
+    margin:auto;
+  }
+  .annuler{
+    margin-left:53.5%;
+  }
+
+  label {  
+    color:white;
+    float: left;  
+    padding-right: 55px;  
+    display: block;  
+    width: 155px;  
+  }  
+
+  .logo{
+    width: 150%;
+    margin-left:300px;
+    margin-top: 100px;
+  }
+  .champi{
+    width: 100%;
+    margin-left:300px;
+    margin-top: 100px;
+  }
+  .topnav{
+    background-color: rgb(255, 253, 253);
+    overflow: hidden;
+    margin:0px;
+  }
+  .topnav a{
+    float: left;
+    color:#0c0c0c;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover{
+    background-color: rgb(41, 40, 40);
+    color:rgb(255, 251, 251);
+  }
+  .topnav a.active{
+    background-color: #b1b8f7;
+    color:white;
+  }
+  footer{
+    padding-bottom:10px;
+  }
 }
 
-main{
-  display:flex;
-}
-.banner{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:30%;
-  border: 1px solid white;
-}
-nav{
-  display:flex;
-  flex-direction: row;
-  margin:auto;
-  padding:auto;
-}
-button{
-  cursor:pointer;
-}
-.navi button{
-  margin:auto;
-  margin-right: 25px;
-  margin-left:25px;
-  font-size:30px;
-  padding:20px;
-  border-radius: 8px;
-  transition-duration: 0,4s;
-  background-color: #d4d1d1;
-}
-.navi button:hover{
-  background-color:rgb(46, 44, 44);
-  color:white;
-}
 
+@media all and (orientation:portrait){
+  header h1 {
+    margin-top:30px;
+    text-align: center;
+    color:white;
+    font-size:18px;
+  }
 
-.homepage{
-  margin: auto;
-  margin-top:75px;
-  margin-right: 225px;
-  border: 2px solid white;
-  padding: 10px;
-  color:white;
-}
-.auteur{
-  margin-left:50px;
-}
-.liste{
-  margin-left: 5%;
-  color:white;
-}
-.ajouter{
-  margin:auto;
-  margin-top:25px;
-  border:1px solid white;
-  border-radius: 5px;
-  padding:15px;
-}
+  main{
+    display:flex;
+    flex-direction:column;
+  }
+  .banner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+    border: 1px solid white;
+    margin-top: 30px;
+    margin-bottom:30px;
+  }
+  nav{
+    display:flex;
+    flex-direction: column;
+    margin:auto;
+    padding:auto;
+  }
+  nav a{
+    margin:8px;
+    text-align : center;
+  }
+  button{
+    cursor:pointer;
+  }
+  .navi button{
+    margin:auto;
+    margin-right: 15px;
+    margin-left:21px;
+    font-size:20px;
+    padding:10px;
+    border-radius: 8px;
+    transition-duration: 0,4s;
+    background-color: #d4d1d1;
+  }
+  .navi button:hover{
+    background-color:rgb(46, 44, 44);
+    color:white;
+  }
 
-.ajouter_new button {  
-  margin:auto;
-  margin-left:30px;
-  padding:10px;
-  font-size:20px;
-  border-radius: 8px;
-  transition-duration: 0,4s; 
-  background-color: #d4d1d1;
-}  
-.ajouter_new button:hover{
-  background-color: black;
-  color:white;
-}
-  
-body {  
-  color: #b1aeae;  
-  font-size: 20px;  
-  font-family:Arial, monospace;  
-  background-color: #383a3b;  
-}  
-  
-h2 {  
-  text-align: center;  
-}  
+  .homepage{
+    text-align:center;
+    margin: auto;
+    margin-top:75px;
+    border: 2px solid white;
+    padding: 10px;
+    color:white;
+  }
+  .liste{
+    margin-left: 5%;
+    color:white;
+    font-size:15px;
+  }
+  .ajouter{
+    margin:auto;
+    margin-top:25px;
+    border:1px solid white;
+    border-radius: 5px;
+    padding:15px;
+    font-size:15px;
+  }
+  .form_group{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+  }
+  input{
+    max-width:110px;
+    margin-left:75px;
+  }
+  select{
+    max-width:110px;
+    margin-left:75px;
+  }
 
-.liste_jou{
-  width: 66%;
-  margin-left:25%;
-  margin-top: 15%;
-}
+  .ajouter_new button {  
+    margin:auto;
+    margin-left:30px;
+    padding:10px;
+    font-size:20px;
+    border-radius: 8px;
+    transition-duration: 0,4s; 
+    background-color: #d4d1d1;
+  }  
+  .ajouter_new button:hover{
+    background-color: black;
+    color:white;
+  }
+    
+  body {  
+    color: #b1aeae;  
+    font-size: 20px;  
+    font-family:Arial, monospace;  
+    background-color: #383a3b;  
+  }  
+    
+  h2 {  
+    text-align: center;  
+  }  
 
-.ajouter button{
-  margin:auto;
-  margin-top:5%;
-  padding: 15px;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-.sauvegarder{
-  margin:auto;
-}
-.annuler{
-  margin-left:53.5%;
-}
+  .liste_jou{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom:10%;
 
-label {  
-  color:white;
-  float: left;  
-  padding-right: 55px;  
-  display: block;  
-  width: 155px;  
-}  
+  }
 
-.logo{
-  width: 150%;
-  margin-left:300px;
-  margin-top: 100px;
-}
-.champi{
-  width: 100%;
-  margin-left:300px;
-  margin-top: 100px;
-}
-.topnav{
-  background-color: rgb(255, 253, 253);
-  overflow: hidden;
-  margin:0px;
-}
-.topnav a{
-  float: left;
-  color:#0c0c0c;
-  text-align: center;
-  padding:14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.topnav a:hover{
-  background-color: rgb(41, 40, 40);
-  color:rgb(255, 251, 251);
-}
-.topnav a.active{
-  background-color: #b1b8f7;
-  color:white;
-}
-footer{
-  padding-bottom:10px;
+  .ajouter button{
+    margin:auto;
+    margin-top:5%;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .sauvegarder{
+    margin:auto;
+  }
+  .annuler{
+   margin:auto;
+  }
+
+  label {  
+    color:white;
+    float: left;  
+    padding-right: 55px;  
+    display: block;  
+    width: 155px;  
+  }  
+
+  .logo{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom:10%;
+  }
+  .champi{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom:10%;
+  }
+  .topnav{
+    background-color: rgb(255, 253, 253);
+  }
+  .topnav a{
+    display:flex;
+    flex-direction:column;
+    float: left;
+    color:#0c0c0c;
+    text-align: center;
+    text-decoration:none;
+    padding:2px 3px;
+    font-size: 14px;
+    margin:0px;
+  }
+  .topnav a:hover{
+    background-color: rgb(41, 40, 40);
+    color:rgb(255, 251, 251);
+  }
+  .topnav a.active{
+    background-color: #b1b8f7;
+    color:white;
+  }
+  footer{
+    padding-bottom:10px;
+  }
 }
